@@ -20,7 +20,7 @@ UserManagement.displayName = 'UserManagement';
 
 const UserManagementCotent = () => {
     const { isLoading, error } = useFetchUsers();
-    const { users } = useUserContext();
+    const { users, pagination, updatePage, updatePageSize } = useUserContext();
 
     console.log(isLoading, error, users);
     return (
@@ -40,7 +40,15 @@ const UserManagementCotent = () => {
                     </div>
                 </div>
                 <UserTable users={users} isLoading={isLoading} error={error?.message ? '' : undefined}/>
-                <Pagination totalPages={1} currentPage={1} onPageChange={() => {}}/>
+                <Pagination
+                    key={`${pagination.page}-${pagination.pageSize}`}
+                    totalPages={pagination.totalPage} 
+                    currentPage={pagination.page} 
+                    onPageChange={updatePage} 
+                    onPageSizeChange={updatePageSize} 
+                    pageSize={pagination.pageSize} 
+                    disabled={isLoading}
+                />
             </div>
         </div>
     )

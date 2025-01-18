@@ -4,6 +4,7 @@ import { Table } from "../../../components/ui/table";
 import { titleCase } from "../../../utils/text";
 import { User } from "../types";
 import { getUserStatusColor } from "../utils";
+import { UserRowActions } from "./UserRowAction";
 
 type UserTableProps = {
     users: User[];
@@ -39,16 +40,24 @@ export const UserTable = ({ users, isLoading, error }: UserTableProps) => {
 
 UserTable.displayName = 'UserTable';
 
+
 const UserTableBody = ({ users }: { users: User[] }) => {
     return (
         <Table.Body>
             {users.map((user) => (
-                <Table.Row key={user.id}>
+                <Table.Row key={user.id} className="group"> 
                     <Table.Cell>{user.id}</Table.Cell>
                     <Table.Cell className="font-medium">{user.name}</Table.Cell>
                     <Table.Cell>{user.email}</Table.Cell>
                     <Table.Cell>{titleCase(user.role)}</Table.Cell>
-                    <Table.Cell className={clsx('w-[150px] text-right', getUserStatusColor(user.status))}>{titleCase(user.status)}</Table.Cell>
+                    <Table.Cell className="w-[150px] text-right">
+                        <span className={clsx('group-hover:hidden inline-block', getUserStatusColor(user.status))}>
+                            {titleCase(user.status)}
+                        </span>
+                        <div className="hidden group-hover:inline-flex justify-end items-center gap-2">
+                            <UserRowActions/>
+                        </div>
+                    </Table.Cell>
                 </Table.Row>
             ))}
         </Table.Body>
