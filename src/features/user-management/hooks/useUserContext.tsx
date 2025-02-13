@@ -9,6 +9,8 @@ export const useUserContext = () => {
         return state.user;
     }, [state.user]);
 
+    // console.log(users);
+
     const pagination = useMemo(() => {
         return {
             page: state.page,

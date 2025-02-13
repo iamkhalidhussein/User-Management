@@ -22,7 +22,7 @@ const UserManagementCotent = () => {
     const { isLoading, error } = useFetchUsers();
     const { users, pagination, updatePage, updatePageSize } = useUserContext();
 
-    console.log(isLoading, error, users);
+    // console.log(isLoading, error, users);
     return (
         <div>
             <PageHeader/>
