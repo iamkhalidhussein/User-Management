@@ -21,13 +21,14 @@ export const useFetchUsers = () => {
             }; 
 
             const result = await UserAPI.get(params);
+
             dispatch({
                 type: 'SET_STATE',
                 payload: {
                     user: result.users,
                     totalPages: result.totalPages,
                     totalUsers: result.totalUsers,
-                    page: result.page,
+                    page: result.currentPage,
                     pageSize: result.pageSize,
                     filter,
                     sort,

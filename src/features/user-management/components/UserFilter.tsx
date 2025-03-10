@@ -1,4 +1,4 @@
-import { Select } from "../../../components/ui/select";
+import { Select } from "../../../components/ui/select-header";
 import { useUserContext } from "../hooks/useUserContext";
 import type { Role, SortColumn, SortDirection, Status } from "../types";
 

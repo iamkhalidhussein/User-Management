@@ -1,5 +1,5 @@
 import { Button } from "./button";
-import { Select } from "./select";
+import { Select } from "./select-header";
 
 interface PaginationProps {
     currentPage: number;
