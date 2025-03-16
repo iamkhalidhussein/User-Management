@@ -1,4 +1,4 @@
-### User Management System
+# User Management System
 
 ## Overview
 
@@ -26,13 +26,13 @@ State Management: ( Context API )
 
 ## Installation
 
-# Prerequisites
+## Prerequisites
 
 Node.js & npm installed
 
 (If using a backend) Backend server running
 
-# Steps
+## Steps
 
 Clone the repository:
 ```bash
