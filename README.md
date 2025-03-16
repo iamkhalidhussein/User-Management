@@ -1,50 +1,91 @@
-# React + TypeScript + Vite
+### User Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The User Management System is a web application that allows administrators to efficiently manage users. It provides functionalities such as searching, deleting, updating, and sorting users to streamline user management tasks.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+🔍 Search Users – Quickly find users by name or other attributes.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+🗑 Delete Users – Remove unwanted users from the system.
 
-- Configure the top-level `parserOptions` property like this:
+✏ Update Users – Modify user details easily.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+🔄 Sort Users – Organize users based on different criteria.
+
+📄 User List Display – View all users in a structured format.
+
+## Tech Stack
+
+Frontend: React, Tailwind CSS
+
+Backend: Nodejs, Expressjs, MongoDB, Mongoose
+
+State Management: ( Context API )
+
+## Installation
+
+# Prerequisites
+
+Node.js & npm installed
+
+(If using a backend) Backend server running
+
+# Steps
+
+Clone the repository:
+```bash
+git clone https://github.com/iamkhalidhussein/User-Management.git
+```
+```bash
+cd user-management-system
+```
+## Install dependencies:
+
+```bash
+pnpm install
+```
+Start the application:
+```bash
+pnpm run dev
+```
+```bash
+Open http://localhost:3000 in your browser.
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Usage
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+Search for users using the search bar.
+
+Click the Edit button to update user details.
+
+Click the Delete button to remove a user.
+
+Use sorting options to organize users based on different criteria.
+```
+
+## Roadmap
+
+✅ Basic CRUD operations
+
+🚀 Implement user authentication
+
+📊 Add user analytics dashboard
+
+🔔 Integrate real-time notifications
+
+## Contributing
+
+Contributions are welcome! Feel free to fork the repository, open issues, and submit pull requests.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+GitHub: https://github.com/iamkhalidhussein
+
+Email: mdkhalidhossen10@gmail.com
